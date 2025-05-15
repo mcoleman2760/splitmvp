@@ -69,16 +69,18 @@ button:hover {
 ul#expenseList {
   list-style: none;
   padding-left: 0;
+  
 }
 
 ul#expenseList li {
-  
+  background: white;
   padding: 10px;
   margin-bottom: 8px;
+  width: fit-content;
   border: 1px solid #ddd;
   border-radius: 5px;
-  border-right: 1px;
-  width: fit-content;
+  ;
+  
 }
 
 /* Total & Amount Owed */
@@ -92,6 +94,7 @@ ul#expenseList li {
 .remove-btn {
   margin-left: 10px;
   margin-top: 10px;
+  margin-right: 10px;
   background-color: #000000;
   color: rgb(248, 34, 34);
   border: none;
@@ -106,3 +109,15 @@ ul#expenseList li {
   color: aqua;
 }
 
+/* Optional: Responsive Design */
+@media (max-width: 600px) {
+  form input {
+    display: block;
+    margin: 10px 0;
+    width: 100%;
+  }
+
+  form button {
+    width: 100%;
+  }
+}
