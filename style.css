@@ -1,3 +1,4 @@
+/* General Body Styling */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -5,6 +6,7 @@ body {
   background: #f7f7f7;
 }
 
+/* Header */
 header {
   background: #ff4444;
   color: white;
@@ -12,6 +14,27 @@ header {
   text-align: center;
 }
 
+/* Welcome Page */
+#welcomePage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+#welcomePage form {
+  margin-top: 20px;
+}
+
+#welcomePage input, #welcomePage button {
+  padding: 10px;
+  font-size: 16px;
+  margin: 5px;
+}
+
+/* Main Content */
 main {
   padding: 20px;
 }
@@ -20,10 +43,12 @@ section {
   margin-bottom: 30px;
 }
 
+/* Form Elements */
 form input, form button {
   padding: 10px;
   margin-right: 5px;
   margin-top: 5px;
+  font-size: 16px;
 }
 
 button {
@@ -31,21 +56,39 @@ button {
   color: white;
   border: none;
   cursor: pointer;
+  font-size: 16px;
+  padding: 10px 15px;
+  border-radius: 4px;
 }
 
 button:hover {
   background-color: #e63a3a;
 }
 
-.chat-box {
-  background: white;
-  border: 1px solid #ccc;
-  height: 150px;
-  overflow-y: scroll;
-  padding: 10px;
-  margin-bottom: 10px;
+/* Expense List */
+ul#expenseList {
+  list-style: none;
+  padding-left: 0;
 }
 
+ul#expenseList li {
+  
+  padding: 10px;
+  margin-bottom: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  
+  width: fit-content;
+}
+
+/* Total & Amount Owed */
+#totalCost, #amountOwed {
+  font-size: 18px;
+  margin-top: 10px;
+  color: #333;
+}
+
+/* Remove Button */
 .remove-btn {
   margin-left: 10px;
   margin-top: 10px;
@@ -54,9 +97,24 @@ button:hover {
   border: none;
   cursor: pointer;
   height: 40px;
+  border-radius: 4px;
+  padding: 0 10px;
 }
 
 .remove-btn:hover {
   background-color: #ff0000;
   color: aqua;
+}
+
+/* Optional: Responsive Design */
+@media (max-width: 600px) {
+  form input {
+    display: block;
+    margin: 10px 0;
+    width: 100%;
+  }
+
+  form button {
+    width: 100%;
+  }
 }
