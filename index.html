@@ -6,40 +6,50 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    
-    <img src="img/split.png" width="200" height="200" alt="split logo">
-    <p>Split the bill without conflict</p>
-  </header>
+  <!-- Name Entry Page -->
+  <div id="welcomePage">
+    <h1>Welcome to </h1>
+    <img src="img/split.png" width="600" height="266" alt="split logo">
+    <p>Enter your name to continue</p>
+    <form id="nameForm">
+      <input type="text" id="userName" placeholder="Your name" required>
+      <button type="submit">Continue</button>
+    </form>
+  </div>
 
-  <main>
-    <section class="add-expense">
-      <h2>Add an Expense</h2>
-      <form id="expenseForm">
-        <input type="text" placeholder="Item (e.g. Pizza)" id="item" required>
-        <input type="number" step="0.01" placeholder="Amount ($)" id="amount" required>
+  <!-- Main App (Hidden by Default) -->
+  <div id="mainApp" style="display:none;">
+    <header>
+      <img src="img/split.png" width="300" height="133" alt="split logo">
+      <p>Split the bill without conflict</p>
+    </header>
 
-        <input type="text" placeholder="Person who purchased" id="assignedTo" required>
-        <button type="submit">Add</button>
-      </form>
-    </section>
+    <main>
+      <section class="add-expense">
+        <h2>Add an Expense</h2>
+        <form id="expenseForm">
+          <input type="text" placeholder="Item (e.g. Pizza)" id="item" required>
+          <input type="number" step="0.01" placeholder="Amount ($)" id="amount" required>
+          <input type="text" placeholder="Person who purchased" id="assignedTo" required>
+          <button type="submit">Add</button>
+        </form>
+      </section>
 
-    <section class="expense-list">
-      <h2>Current Expenses</h2>
-      <ul id="expenseList"></ul>
-      <p id="totalCost"><strong>Total: $0.00</strong></p>
-    </section>
+      <section class="expense-list">
+        <h2>Current Expenses</h2>
+        <ul id="expenseList"></ul>
+        <p id="totalCost"><strong>Total: $0.00</strong></p>
+      </section>
 
-    <section class="group-chat">
-      <h2>Group Chat</h2>
-      <div id="chatBox" class="chat-box"></div>
-      <form id="chatForm">
-        <input type="text" id="chatInput" placeholder="Type a message...">
-        <button type="submit">Send</button>
-      </form>
-    </section>
-  </main>
+      <section class="group-chat">
+        <h2>Amount you Owe:</h2>
+        <p id="amountOwed"><strong>You Owe: $0.00</strong></p>
+        <form>
+          <button type="button" onclick="payDebt()">Pay</button>
+        </form>
+      </section>
+    </main>
+  </div>
 
   <script src="script.js"></script>
 </body>
-</html>
