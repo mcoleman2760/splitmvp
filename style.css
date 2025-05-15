@@ -106,15 +106,3 @@ ul#expenseList li {
   color: aqua;
 }
 
-/* Optional: Responsive Design */
-@media (max-width: 600px) {
-  form input {
-    display: block;
-    margin: 10px 0;
-    width: 100%;
-  }
-
-  form button {
-    width: 100%;
-  }
-}
